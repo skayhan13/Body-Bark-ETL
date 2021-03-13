@@ -91,6 +91,8 @@ REFERENCES "Product_List" ("sku");
 ALTER TABLE "Ordered_Items" ADD CONSTRAINT "fk_Ordered_Items_order_id" FOREIGN KEY("order_id")
 REFERENCES "Internet_Order" ("order_id");
 
-select * from "Boutiques";
-
-
+select * from "Internet_Order";
+select * from "Internet_Customers";
+select * from "Ordered_Items";
+select * from "Product_List";
+select * from "Top_Boutiques";
