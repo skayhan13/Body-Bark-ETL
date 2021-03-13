@@ -22,22 +22,22 @@ CREATE TABLE "Internet_Customers" (
 CREATE TABLE "Product_List" (
     "sku" varchar,
     "description" varchar,
-    "product_num" int,
+    "product_num" varchar,
     "product_color" varchar,
     "product_size" varchar,
     CONSTRAINT "pk_Product_List" PRIMARY KEY (
         "sku"
      )
 );
-
+drop table "Internet_Order" CASCADE;
 CREATE TABLE "Internet_Order" (
-    "order_id" int,
+    "order_id" varchar,
     "customer_id" int,
-    "order_date" date,
+    "order_date" varchar,
     "month" int,
     "order_status" varchar,
-    "sub_total" money,
-    "order_total" money,
+    "sub_total" float,
+    "order_total" float,
     "total_quantity" int,
     "coupon" boolean,
     CONSTRAINT "pk_Internet_Order" PRIMARY KEY (
@@ -45,13 +45,11 @@ CREATE TABLE "Internet_Order" (
      )
 );
 
+drop table "Top_Boutiques" CASCADE;
 CREATE TABLE "Top_Boutiques" (
     "boutique_id" int,
     "boutique_name" varchar,
-    "ranking" int,
-    CONSTRAINT "pk_Top_Boutiques" PRIMARY KEY (
-        "boutique_id"
-     )
+    "ranking" int
 );
 
 CREATE TABLE "Boutiques" (
@@ -66,19 +64,22 @@ CREATE TABLE "Boutiques" (
      )
 );
 
+drop table "Product_List" CASCADE
+select * from "Internet_Order"
 
+drop table "Ordered_Items";
 CREATE TABLE "Ordered_Items" (
-    "order_id" int,
+    "order_id" varchar,
     "total_each_sku" int,
     "sku" varchar,
-    "product_unit_price" money,
+    "product_unit_price" float,
     CONSTRAINT "pk_Ordered_Items" PRIMARY KEY (
         "order_id","sku"
      )
 );
 
-ALTER TABLE "Boutiques" ADD CONSTRAINT "fk_Boutiques_boutique_id" FOREIGN KEY("boutique_id")
-REFERENCES "Top_Boutiques" ("boutique_id");
+ALTER TABLE "Top_Boutiques" ADD CONSTRAINT "fk_Boutiques_boutique_id" FOREIGN KEY("boutique_id")
+REFERENCES "Boutiques" ("boutique_id");
 
 ALTER TABLE "Internet_Order" ADD CONSTRAINT "fk_Internet_Order_customer_id" FOREIGN KEY("customer_id")
 REFERENCES "Internet_Customers" ("customer_id");
@@ -90,6 +91,6 @@ REFERENCES "Product_List" ("sku");
 ALTER TABLE "Ordered_Items" ADD CONSTRAINT "fk_Ordered_Items_order_id" FOREIGN KEY("order_id")
 REFERENCES "Internet_Order" ("order_id");
 
-
+select * from "Boutiques";
 
 
