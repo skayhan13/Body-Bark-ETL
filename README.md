@@ -9,9 +9,9 @@ The purpose of our project was to prepare [Body Bark](https://www.bodybark.com) 
 # ETL Overview
 * **E**xtract: We extracted our data as CSV files from BigCommerce and Quickbooks. BigCommerce provided us data on internet customers and sales and Quickbooks provided us data on Boutique customers and orders. The CSV files can be found in the Outputs folder. 
 
-We then created the schema below using QuickERD tool in order to identify Primary and Foreign Keys. 
+  We then created the schema below using QuickERD tool in order to identify Primary and Foreign Keys. 
 
-![QuickDBD-ETLProject_v11](QuickDBD-ETLProject_v11.png)
+  ![QuickDBD-ETLProject_v11](QuickDBD-ETLProject_v11.png)
 
 * **T**ransform: The transformation of all csv files was done using the Pandas library available to Python in Jupyter Notebook. The code for transfroming the data of each table is found in the respective .ipynb files. 
 
