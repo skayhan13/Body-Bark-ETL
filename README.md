@@ -11,7 +11,8 @@ The purpose of our project was to prepare [Body Bark](https://www.bodybark.com) 
 
   We then created the schema below using QuickERD tool in order to identify Primary and Foreign Keys. 
 
-  ![QuickDBD-ETLProject_FINAL](QuickDBD-ETLProject_FINAL.png)
+  ![QuickDBD-ETLProject_FINAL](QuickDBD-ETLProject_FINAL.png){:height="20px" width="40px"}
+
 
 * **T**ransform: The transformation of all csv files was done using the Pandas library available to Python in Jupyter Notebook. The code for transfroming the data of each table is found in the respective .ipynb files. 
 
