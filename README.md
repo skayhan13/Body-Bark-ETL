@@ -1,7 +1,7 @@
 # Body-Bark-ETL Project
 
 # Project Requirements 
-The requirements of this team project wre to collect two or more datasets, perform ETL on the data, and produce a final technical report outlining our project motivation, data sources, justification for the chosen data structure, and use cases for how the data could be utilized by the end user. 
+The requirements of this team project were to collect two or more datasets, perform ETL on the data, and produce a final technical report outlining our project motivation, data sources, justification for the chosen data structure, and use cases for how the data could be utilized by the end user. 
 
 # Project Purpose and Data Sources
 The purpose of our project was to prepare [Body Bark](https://www.bodybark.com) data for future analysis and data retrieval. Working with Python and SQL, specifically Postgres, we converted csv files taken from two different Body Bark data sources (BigCommerce and Quickbooks) into a newly mapped relational database. 
